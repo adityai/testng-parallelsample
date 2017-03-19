@@ -1,4 +1,3 @@
-# testng-providersample
-Sample testng class with data provider that loads unique test data based on method name
+# testng-parallelsample
+Sample testng classes with parallel execution of methods, test classes, suites and multi-threaded.
 
-Run the NewTest.java class with TestNG plugin in Eclipse
