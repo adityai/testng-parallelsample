@@ -1,13 +1,11 @@
 <!-- Running tests inside a suite in parallel  -->
 <suite name="Test-class Suite" parallel="tests" thread-count="2">
     <test name="Test-class test 1">
-        <parameter name="test-name" value="test-method One" />
         <classes>
             <class name="com.iaditya.testng.parallelsample.ParallelSuiteTest" />
         </classes>
     </test>
     <test name="Test-class test 2">
-        <parameter name="test-name" value="test-method One" />
         <classes>
             <class name="com.iaditya.testng.parallelsample.ParallelSuiteTest" />
         </classes>
