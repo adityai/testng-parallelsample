@@ -17,13 +17,13 @@ public class ParallelSuiteTest
 {
     String testName = "";
  
-    @BeforeTest
-    @Parameters({ "test-name" })
-    public void beforeTest(String testName) {
-        this.testName = testName;
-        long id = Thread.currentThread().getId();
-        System.out.println("Before test " + testName + ". Thread id is: " + id);
-    }
+//    @BeforeTest
+//    @Parameters({ "test-name" })
+//    public void beforeTest(String testName) {
+//        this.testName = testName;
+//        long id = Thread.currentThread().getId();
+//        System.out.println("Before test " + testName + ". Thread id is: " + id);
+//    }
  
     @BeforeClass
     public void beforeClass() {
