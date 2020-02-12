@@ -1,5 +1,8 @@
 package com.iaditya.testng.parallelsample;
 
+import org.testng.ITestContext;
+import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -22,6 +25,9 @@ public class ParallelClassesTestOne
     public void testMethodOne() {
         long id = Thread.currentThread().getId();
         System.out.println("Sample test-method One. Thread id is: " + id);
+        ITestResult result = Reporter.getCurrentTestResult();
+        result.setAttribute("requirement",
+                "MRP-80");
     }
  
     @Test
