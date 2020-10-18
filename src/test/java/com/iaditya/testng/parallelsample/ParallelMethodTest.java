@@ -1,33 +1,35 @@
 package com.iaditya.testng.parallelsample;
 
-
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
- 
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class ParallelMethodTest 
 {
-    @BeforeMethod
-    public void beforeMethod() {
-        long id = Thread.currentThread().getId();
-        System.out.println("Before test-method. Thread id is: " + id);
+    private static Map<String, Map<String, String>> testDataMap = null;
+    
+    @BeforeSuite
+    public void getData() {
+        System.out.println("Get data method");
+        Map<String, String> testMethodsOneMap = new HashMap<String, String>();
+        Map<String, String> testMethodsTwoMap = new HashMap<String, String>();
+        testMethodsOneMap.put("test-data", "test data for testMethodsOne");
+        testMethodsTwoMap.put("test-data", "test data for testMethodsOne");
+        testDataMap = new HashMap<String, Map<String, String>>();
+        testDataMap.put("testMethodsOne", testMethodsOneMap);
+        testDataMap.put("testMethodsTwo", testMethodsTwoMap);
     }
- 
+
     @Test
     public void testMethodsOne() {
-        long id = Thread.currentThread().getId();
-        System.out.println("Simple test-method One. Thread id is: " + id);
+        System.out.println("Test data: " + testDataMap.get("testMethodsOne").get("test-data"));
     }
- 
+
     @Test
     public void testMethodsTwo() {
-        long id = Thread.currentThread().getId();
-        System.out.println("Simple test-method Two. Thread id is: " + id);
+        System.out.println("Test data: " + testDataMap.get("testMethodsTwo").get("test-data"));
     }
  
-    @AfterMethod
-    public void afterMethod() {
-        long id = Thread.currentThread().getId();
-        System.out.println("After test-method. Thread id is: " + id);
-    }
 }
