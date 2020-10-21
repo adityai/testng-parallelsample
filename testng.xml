@@ -1,7 +1,7 @@
 <suite name="Test-method Suite" parallel="methods" thread-count="2" >
-  <test name="Test-method test" group-by-instances="true">
+  <test name="Test-method test">
     <classes>
-      <class name="com.iaditya.testng.parallelsample.ParallelMethodTest" />
+      <class name="com.iaditya.testng.parallelsample.FactoryClassOne" />
     </classes>
   </test>
 </suite>
