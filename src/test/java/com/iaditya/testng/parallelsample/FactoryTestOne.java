@@ -13,7 +13,7 @@ public class FactoryTestOne {
 	
 	@Test()
 	public void testFactoryOneMethod1() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(1000);
 		System.out.println(this.getClass().getName() + " " + fieldOne);
 	}
 

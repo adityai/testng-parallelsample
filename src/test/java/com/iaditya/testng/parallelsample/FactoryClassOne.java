@@ -13,7 +13,7 @@ public class FactoryClassOne {
 	@DataProvider(name = "data")
 	private Object[][] getData() {
 
-		Object[][] tableData = { {"Line 1"}, {"Line 2"}, {"Line 3"}, {"Line 4"}};
+		Object[][] tableData = { {"Line 1"}, {"Line 2"}, {"Line 3"}, {"Line 4"}, {"line 5"}, {"line 6"}, {"line 7"}, {"line 8"}, {"line 9"}};
 		return tableData;
 	}
 
